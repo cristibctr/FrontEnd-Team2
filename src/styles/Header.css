@@ -1,0 +1,23 @@
+.headerContainer{
+    background-color: rgb(36, 37, 42);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.logoContainer{
+    margin-left: 50px;
+}
+.headerContainer a{
+    text-decoration: none;
+    color: white;
+}
+.navigationElement{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px 50px 0px 0px;
+}
+.navigationElement div{
+    margin: 0px 50px 0px 0px;
+}
