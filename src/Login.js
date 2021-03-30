@@ -56,6 +56,7 @@ export default class Login extends Component {
                         <p>Username or email</p>
                         <input type="text" />
 
+
                     </label>
                 </div>
                 <div className="col-md-3 center">
