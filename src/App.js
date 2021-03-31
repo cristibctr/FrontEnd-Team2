@@ -1,9 +1,10 @@
 import React from "react"
 import Header from "./Header"
-import Footer from "./Footer"
 import Login from "./Login"
 import Overview from "./Overview"
 import HomePage from "./HomePage"
+import Footer from "./Footer"
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/overview" component={Overview} />
             </Switch>
+            <Footer />
         </Router>
     )
 }
