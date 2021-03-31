@@ -47,7 +47,7 @@ export default class Login extends Component {
             <form>
                 <style></style>
                 <div className="center">
-                    <div className="logoContainer">
+                    <div className="logoContainer" style={{marginLeft: 0}}>
                         <Logo name="Helpie" />
                     </div>
                 </div>
@@ -91,7 +91,7 @@ export default class Login extends Component {
                     </div></div>
 
                 <p className="col-md-3 center forgot-password text-right ">
-                    Forgot <a href="#">password?</a>
+                    <a href="#">Forgot password?</a>
                 </p>
             </form>
         );
