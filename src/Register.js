@@ -9,7 +9,6 @@ const Wrapper = styled.div`
         width: 10%
     }
 `
-
 const BtnFacebook = styled.button`
     width: 165px;
     height:35px;  
@@ -20,7 +19,6 @@ const BtnFacebook = styled.button`
     text-align: center;
     margin:5px;
     display: inline-block;
-
     &:hover{
         background: #3b5998;
         opacity: 0.6;
@@ -35,71 +33,133 @@ const BtnGoogle = styled.button`
     color:white;
     border:0px transparent;
     text-align: center;
-
     &:hover{
         background: #3b5998;
         opacity: 0.6;
     }
 `
 export default class Register extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          email: "",
+          username: "",
+          address: "",
+          password: "",
+          passwordConfirm: "",
+          registerErrors: ""
+        };
+    
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({
+          [event.target.name]: event.target.value
+        });
+      }
+    
+      handleSubmit(event) {
+        const { email, username, address, password, passwordConfirm } = this.state;
+      }
+    
     render() {
         return (
-            <form>
-                <style></style>
+            <div className="body">
+            <div className="center" id="logo">
+               <div>
+                 <Logo name="Helpie" />
+               </div>
+             </div>
+             <div className="center">
+               <form onSubmit={this.handleSubmit}>
+               <div className="center">
+                <label>
+                  <p>Email address</p>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </label>
+              </div>
+              <div className="center">
+                <label>
+                  <p>Username</p>
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    value={this.state.username}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </label>
+              </div>
+              <div className="center">
+                <label>
+                  <p>Address</p>
+                  <input
+                    type="address"
+                    name="address"
+                    placeholder="Address"
+                    value={this.state.address}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </label>
+              </div>
+              <div className="center">
+                <label>
+                  <p>Password</p>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </label>
+              </div>
+              <div className="center">
+                <label>
+                  <p>Confirm password</p>
+                  <input
+                    type="password"
+                    name="passwordConfirm"
+                    placeholder="Confirm password"
+                    value={this.state.passwordConfirm}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </label>
+              </div>
+
                 <div className="center">
-                    <div className="logoContainer" style={{marginLeft: 0}}>
-                        <Logo name="Helpie" />
-                    </div>
-                </div>
-                <div className="col-md-3 center field">
-                    <label>
-                        <p>Email address</p>
-                        <input type="email" />
-                    </label>
-                </div>
-                <div className="col-md-3 center field">
-                    <label>
-
-                        <p>Username</p>
-                        <input type="text" />
-                    </label>
-                </div>
-                <div className="col-md-3 center field">
-                    <label>
-                        <p>Address</p>
-                        <input type="address" />
-                    </label>
-                </div>
-                <div className="col-md-3 center field">
-                    <label>
-                        <p>Password</p>
-                        <input type="password" />
-                    </label>
-                </div>
-                <div className="col-md-3 center field">
-                    <label>
-                        <p>Repeat password</p>
-                        <input type="password" />
-                    </label>
-                </div>
-
-                <div className="col-md-3 center">
-                    <Button variant="contained" color="primary" disableElevation>
+                    <Button type="submit" variant="contained" color="primary" disableElevation>
                         Register
                     </Button>
                 </div>
-                <div className="col-md-3 center">
-                    <div style={{ display: 'flex', flexWrap: 'wrap' }} >
-                        <Wrapper>
-                            <BtnFacebook>
-                                &nbsp;&nbsp;Register with Facebook
+                <div className="center">
+                <div className="fb">
+                  <Wrapper>
+                    <BtnFacebook>
+                      &nbsp;&nbsp;Register with Facebook
                         </BtnFacebook>
-                            <BtnGoogle>
-                                &nbsp;&nbsp;Register with Google
+                    <BtnGoogle>
+                      &nbsp;&nbsp;Register with Google
                         </BtnGoogle>
-                        </Wrapper>
-                    </div></div>
-            </form>
+                  </Wrapper>
+                </div></div>
+                </form>
+                </div>
+        </div>
         );
     }
 }
