@@ -68,13 +68,13 @@ export default class Register extends Component {
     render() {
         return (
             <div className="body">
-            <div className="center" id="logo">
-               <div>
-                 <Logo name="Helpie" />
-               </div>
+            <div className="center">
+            <div className="center" >
+        <img src={require('./styles/LogoH-02.png').default}/>
+    </div>
              </div>
              <div className="center">
-               <form onSubmit={this.handleSubmit}>
+               <form className="form-control signup-container" onSubmit={this.handleSubmit}>
                <div className="center">
                 <label>
                   <p>Email address</p>
