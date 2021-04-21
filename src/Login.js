@@ -64,22 +64,22 @@ export default class Login extends Component {
 
   render() {
     return (
+    
       <div className="body">
-         <div className="center" id="logo">
-            <div>
-              <Logo name="HelPie" />
-            </div>
-          </div>
+        <div className="center" >
+      <img src={require('./styles/LogoH-02.png')} />
+    </div>
         <div>
+        
           <div className="center">
-            <form onSubmit={this.handleSubmit}>
-              <div className="center">
+            <form className="signup-container form-control" onSubmit={this.handleSubmit}>
+              <div className="center text">
                 <label>
                   <p>Username or email</p>
-                  <input
+                  <input className="form__field"
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="Please enter your email"
                     value={this.state.email}
                     onChange={this.handleChange}
                     required
@@ -90,10 +90,10 @@ export default class Login extends Component {
                 <label>
 
                   <p>Password</p>
-                  <input
+                  <input className="form__field"
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="Please enter your password"
                     value={this.state.password}
                     onChange={this.handleChange}
                     required
