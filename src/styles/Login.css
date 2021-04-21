@@ -3,9 +3,12 @@
 p{
   margin-bottom: 4px;
   margin-top: 4px;
+  align-items: center;
+  color:rgb(6, 28, 46);
+  font-family: 'Segoe UI',sans-serif;
 }
 .field:hover {
-  background-color: rgba(255, 255, 255, 0.45);
+  
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
 .fb {
@@ -15,13 +18,15 @@ p{
 .body{
   background: url(help.jpg) repeat;
   display: grid;
-  grid-template-rows: 25% 75%;
+  grid-template-rows: 30% 75%;
   height: 100vh;
 }
-
+img{
+  height:120%;
+}
 #logo{
   margin-left: 0;
-  background: url(./LogoH-02.png);
+  
 
 }
 .signup-container {
@@ -47,25 +52,14 @@ input[type=text] {
   margin: 8px 8px;
   box-sizing: border-box;
 }
-.field {
-  width: 100%;
-  height: 56px;
-  border-radius: 4px;
-  position: relative;
-  background-color: rgba(13, 85, 179, 0.3);
 
-}
-.field:hover {
-  background-color: rgba(22, 181, 221, 0.45);
-  box-shadow: 0px 4px 20px 0px rgba(40, 149, 199, 0.05);
-}
 .form-control {
   background-color: transparent;
   border-top: 0;
   border-right: 0;
   border-left: 0;
   border-radius: 0;
- border-color: #111;
+
 }
 .fb {
   display: flex;
@@ -84,7 +78,6 @@ input[type=text]{
   padding:20px;
   margin:5px;
   border-radius:2px;
-  border:5px solid rgb(26, 177, 197);
   font-family:inherit;
 }
 /* input[type=text] {
@@ -98,13 +91,11 @@ input[type=text]{
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid gray;
   outline: 0;
   font-size: 1rem;
-  color: white;
   padding: 5px 0;
   background: transparent;
-  transition: border-color 0.2s;
+ 
 
 }
 
