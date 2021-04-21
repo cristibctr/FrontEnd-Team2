@@ -6,6 +6,7 @@ const MapItems = [
   { title: "Login", url: "/login" },
   { title: "Register", url: "/register" },
   { title: "Profile", url: "/profile" },
+  { title: "Contact", url: "/ContactPage" },
   { title: "Overview", url: "/overview" },
 ];
 
