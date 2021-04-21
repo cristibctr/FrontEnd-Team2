@@ -5,6 +5,7 @@ const navItems = [
   { title: "Home", url: "/" },
   { title: "Login", url: "/login" },
   { title: "Register", url: "/register" },
+  { title: "Profile", url: "/profile" },
   { title: "Overview", url: "/overview" },
 ];
 
