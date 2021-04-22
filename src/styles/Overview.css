@@ -1,3 +1,7 @@
+#pagina{
+  background-color: black;
+}
+
 #titlu{
     text-align: center;
 }
@@ -194,65 +198,6 @@
     }
   }
 
-  #epilepsy {
-    -webkit-animation:rainbow .1s infinite;
-    -ms-animation:rainbow .5s infinite;
-    -o-animation:rainbow .5s infinite;
-    animation:rainbow .5s infinite;
-    }
-    @-webkit-keyframes rainbow {
-    0% {background: red;}
-    10% {background: orange;}
-    20% {background: yellow;}
-    30% {background: #80ff00;}
-    40% {background: #00ff00;}
-    50% {background: #00ff80;}
-    60% {background: #00ffff;}
-    70% {background: #0080ff;}
-    80% {background: blue;}
-    90% {background: #8000ff;}
-    100% {background: #ff0080;}
-    }
-    @-ms-keyframes rainbow {
-      0% {background: red;}
-      10% {background: orange;}
-      20% {background: yellow;}
-      30% {background: #80ff00;}
-      40% {background: #00ff00;}
-      50% {background: #00ff80;}
-      60% {background: #00ffff;}
-      70% {background: #0080ff;}
-      80% {background: blue;}
-      90% {background: #8000ff;}
-      100% {background: #ff0080;}
-    }
-    @-o-keyframes rainbow {
-      0% {background: red;}
-      10% {background: orange;}
-      20% {background: yellow;}
-      30% {background: #80ff00;}
-      40% {background: #00ff00;}
-      50% {background: #00ff80;}
-      60% {background: #00ffff;}
-      70% {background: #0080ff;}
-      80% {background: blue;}
-      90% {background: #8000ff;}
-      100% {background: #ff0080;}
-    }
-    @keyframes rainbow {
-      0% {background: red;}
-      10% {background: orange;}
-      20% {background: yellow;}
-      30% {background: #80ff00;}
-      40% {background: #00ff00;}
-      50% {background: #00ff80;}
-      60% {background: #00ffff;}
-      70% {background: #0080ff;}
-      80% {background: blue;}
-      90% {background: #8000ff;}
-      100% {background: #ff0080;}
-    }
-    
     #jumping {
       position: relative;
       bottom: 70px;
@@ -303,4 +248,62 @@
     }
     
 
-
+    #epilepsy {
+      -webkit-animation:rainbow .1s infinite;
+      -ms-animation:rainbow .5s infinite;
+      -o-animation:rainbow .5s infinite;
+      animation:rainbow .5s infinite;
+      }
+      @-webkit-keyframes rainbow {
+      0% {background: red;}
+      10% {background: orange;}
+      20% {background: yellow;}
+      30% {background: #80ff00;}
+      40% {background: #00ff00;}
+      50% {background: #00ff80;}
+      60% {background: #00ffff;}
+      70% {background: #0080ff;}
+      80% {background: blue;}
+      90% {background: #8000ff;}
+      100% {background: #ff0080;}
+      }
+      @-ms-keyframes rainbow {
+        0% {background: red;}
+        10% {background: orange;}
+        20% {background: yellow;}
+        30% {background: #80ff00;}
+        40% {background: #00ff00;}
+        50% {background: #00ff80;}
+        60% {background: #00ffff;}
+        70% {background: #0080ff;}
+        80% {background: blue;}
+        90% {background: #8000ff;}
+        100% {background: #ff0080;}
+      }
+      @-o-keyframes rainbow {
+        0% {background: red;}
+        10% {background: orange;}
+        20% {background: yellow;}
+        30% {background: #80ff00;}
+        40% {background: #00ff00;}
+        50% {background: #00ff80;}
+        60% {background: #00ffff;}
+        70% {background: #0080ff;}
+        80% {background: blue;}
+        90% {background: #8000ff;}
+        100% {background: #ff0080;}
+      }
+      @keyframes rainbow {
+        0% {background: red;}
+        10% {background: orange;}
+        20% {background: yellow;}
+        30% {background: #80ff00;}
+        40% {background: #00ff00;}
+        50% {background: #00ff80;}
+        60% {background: #00ffff;}
+        70% {background: #0080ff;}
+        80% {background: blue;}
+        90% {background: #8000ff;}
+        100% {background: #ff0080;}
+      }
+      
