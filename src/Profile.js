@@ -35,7 +35,7 @@ const Profile = () => {
         </div>
 
         <div>
-            <img src={''} alt="profil" id="poza"/> 
+        <img src={require('./styles/LogoH-02.png').default} id="imageProfile"/>
         </div>
 
         <div id="descriere" class="epilepsy">

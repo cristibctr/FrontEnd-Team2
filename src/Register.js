@@ -70,7 +70,7 @@ export default class Register extends Component {
             <div className="body">
             <div className="center">
             <div className="center" >
-        <img src={require('./styles/LogoH-02.png').default}/>
+        <img src={require('./styles/LogoH-02.png').default} id="imageRegister"/>
     </div>
              </div>
              <div className="center">

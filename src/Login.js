@@ -66,8 +66,8 @@ export default class Login extends Component {
     return (
     
       <div className="body">
-        <div className="center" >
-      <img src={require('./styles/LogoH-02.png')} />
+        <div className="center">
+        <img src={require('./styles/LogoH-02.png').default} id="imageLogin"/>
     </div>
         <div>
         
@@ -75,7 +75,7 @@ export default class Login extends Component {
             <form className="signup-container form-control" onSubmit={this.handleSubmit}>
               <div className="center text">
                 <label>
-                  <p>Username or email</p>
+                  <p id="textLogin">Username or email</p>
                   <input className="form__field"
                     type="email"
                     name="email"
@@ -89,7 +89,7 @@ export default class Login extends Component {
               <div className="center">
                 <label>
 
-                  <p>Password</p>
+                  <p id="textLogin">Password</p>
                   <input className="form__field"
                     type="password"
                     name="password"

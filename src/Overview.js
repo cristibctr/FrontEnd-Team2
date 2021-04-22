@@ -3,8 +3,7 @@ import styles from "./styles/Overview.css"
 
 const Overview = () => {
     return (
-        <div id="pagina">
-
+        <div id="paginaOverview">
             <div id="titlu">
                 <div class="raze">
                     <span class="lumina">Together we are better!</span>
