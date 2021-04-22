@@ -6,15 +6,19 @@ const HomePage = () => {
         <div id="overview">
 
             <div id="beneficiar">
-                <a href="linkbeneficiar.html" className="button"> Beneficiar </a>
+
+                <div class="centerx2">
+                    <a href="beneficiar.js" className="button"> Beneficiar </a>
+                </div>
+
             </div>
 
             <div id="binefacator">
-                <a href="linkbinefacator.html" className="button"> Binefacator </a>
-            </div>
-
-            <div id="footer">
-                Footer
+                
+                <div class="centerx2">
+                    <a href="binefacator.js" className="button"> Binefacator </a>
+                </div>
+                
             </div>
 
         </div>
