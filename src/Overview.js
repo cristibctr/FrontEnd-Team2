@@ -3,7 +3,7 @@ import styles from "./styles/Overview.css"
 
 const Overview = () => {
     return (
-        <div id="pagina" id="epilepsy">
+        <div id="pagina">
 
             <div id="titlu">
                 <div class="raze">
