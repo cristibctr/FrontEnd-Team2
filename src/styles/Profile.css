@@ -92,3 +92,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+#imageProfile{
+    height: 24vw;
+    width: 48vw;
+}

@@ -51,3 +51,7 @@ input[type=text] {
   margin: 8px 0;
   box-sizing: border-box;
 }
+
+#imageRegister{
+  height:120%;
+}

@@ -1,6 +1,6 @@
 
 
-p{
+#textLogin{
   margin-bottom: 4px;
   margin-top: 4px;
   align-items: center;
@@ -21,7 +21,7 @@ p{
   grid-template-rows: 30% 75%;
   height: 100vh;
 }
-img{
+#imageLogin{
   height:120%;
 }
 #logo{
