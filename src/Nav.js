@@ -7,6 +7,7 @@ const navItems = [
   { title: "Register", url: "/register" },
   { title: "Motivation", url: "/motivation" },
   { title: "Profile", url: "/profile" },
+  { title: "Join us", url: "/join" },
   { title: "Overview", url: "/overview" },
 ];
 

@@ -1,0 +1,38 @@
+#body{
+  background-color: rgb(133, 188, 214);
+  border: 10px solid;
+  border-color: aqua;
+  height: 50vw;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  border: 10px solid;
+  border-color: rgb(133, 188, 214);
+}
+
+#title{
+  text-align: center;
+}
+
+#first{
+  display:grid;
+  text-align: center;
+  height: 20vw;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgba(16, 16, 78, 0.7);
+}
+
+#second{
+  display:grid;
+  text-align: center;
+  height: 20vw;
+  grid-column-start: 1;
+  grid-column-end: 3; 
+  background-color: rgba(228, 131, 236, 0.7);
+}
