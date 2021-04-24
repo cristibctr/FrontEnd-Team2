@@ -9,6 +9,7 @@ import Profile from "./Profile"
 import ContactPage from "./ContactPage"
 import Motivation from "./Motivation"
 import Join from "./Join"
+import Logout from "./Logout"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -25,6 +26,7 @@ const App = () => {
                 <Route exact path="/join" component={Join} />
                 <Route exact path="/overview" component={Overview} />
                 <Route exact path="/ContactPage" component={ContactPage} />
+                <Route exact path="/Logout" component={Logout} />
             </Switch>
             <Footer />
         </Router>

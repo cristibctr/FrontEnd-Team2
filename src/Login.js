@@ -60,6 +60,9 @@ export default class Login extends Component {
 
   handleSubmit(event) {
     const { email, password } = this.state;
+    //CHANGE LATER - ONLY FOR TESTING
+    var data = 'loggedin' //response.data
+    localStorage.setItem('user', data);
   }
 
   render() {
