@@ -87,7 +87,9 @@
     0 0 100px #0ff,
     0 0 150px #0ff;
 }
-
+#glow a, #electric a, #power a{
+  text-decoration: none;
+}
 #electric{
   display: flex;
   width: 90%;

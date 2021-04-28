@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./styles/Overview.css"
 
 const Overview = () => {
@@ -15,14 +16,14 @@ const Overview = () => {
             <div id="articole">
 
                 <div id="glow">
-                    Who are we?
+                    <Link to="/ContactPage">Who are we?</Link>
                 </div>
                 <div id="electric">
-                    Why are we doing this?
+                    <Link to="/motivation">Why are we doing this?</Link>
                 </div>
 
                 <div id="power">
-                    Why you should join us?
+                    <Link to="/motivation">Why you should join us?</Link>
                 </div>
 
             </div>

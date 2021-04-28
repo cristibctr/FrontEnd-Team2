@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 const navItems = [
   { title: "Home", url: "/" },
-  { title: "Motivation", url: "/motivation" },
   { title: "Overview", url: "/overview" },
 ];
 
@@ -13,7 +12,6 @@ const LoggedInNavItems = [
 ];
 
 const LoggedOutNavItems = [
-  { title: "Join us", url: "/join" },
   { title: "Login", url: "/login" },
   { title: "Register", url: "/register" },
 ];
