@@ -69,6 +69,7 @@
 }
 
 #glow{
+  text-decoration: none;
   display: flex;
   width: 90%;
   height: 90%;
@@ -87,10 +88,9 @@
     0 0 100px #0ff,
     0 0 150px #0ff;
 }
-#glow a, #electric a, #power a{
-  text-decoration: none;
-}
+
 #electric{
+  text-decoration: none;
   display: flex;
   width: 90%;
   height: 90%;
@@ -172,8 +172,7 @@
 }
 
 #power {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  text-decoration: none;
   font-size: 40px;
   --interval: 1s;
   display: block;
@@ -201,6 +200,7 @@
 }
 
   #jumping {
+    text-decoration: none;
     position: relative;
     bottom: 70px;
     margin: auto;
@@ -248,3 +248,8 @@
         0 50px 25px rgba(0, 0, 0, 0.2);
     }
   }
+
+#dublu{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
