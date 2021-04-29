@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
     background-color: black;
-    height: 50vw;
+    height: 60vw;
     border-style: solid;
     border-color: black;
     border-width: 5px;
@@ -17,12 +17,16 @@
 }
 
 #beneficiar{
-    background-image: radial-gradient(green 0%, rgb(28, 170, 28) 20%, rgb(21, 214, 21) 40%);
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(21, 214, 21);
     padding: auto;
 }
 
 #binefacator{
-    background-image: radial-gradient(rgb(173, 114, 5) 0%, rgb(224, 148, 6) 20%, rgb(252, 178, 40) 40%);
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    background-color:rgb(252, 178, 40);
     padding: auto;
 }
 
@@ -62,4 +66,8 @@
     height: 10%;
     align-items: center;
     justify-content: center;
+}
+
+.graficHome{
+    margin-top: 70px;
 }
