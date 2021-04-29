@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./styles/Overview.css"
+import { Link } from "react-router-dom";
 
 const Overview = () => {
     return (
@@ -15,26 +15,28 @@ const Overview = () => {
 
             <div id="articole">
 
-                <div id="glow">
-                    <Link to="/ContactPage">Who are we?</Link>
+                <div >
+                    <Link to="/ContactPage" id="glow">Who are we?</Link>
                 </div>
-                <div id="electric">
-                    <Link to="/motivation">Why are we doing this?</Link>
+                <div >
+                    <Link to="/motivation" id="electric">Why are we doing this?</Link>
                 </div>
 
-                <div id="power">
-                    <Link to="/motivation">Why you should join us?</Link>
+                <div id="dublu">
+                    <Link to="/join" id="power">Why you should join us?</Link>
                 </div>
 
             </div>
 
-            <div id="jumping">
-                <span>H</span>
-                <span>e</span>
-                <span>l</span>
-                <span>p</span>
-                <span>i </span>
-                <span>e</span>
+            <div>
+                <Link to="/" id="jumping">
+                    <span>H</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>p</span>
+                    <span>i</span>
+                    <span>e</span>
+                </Link>
             </div>
 
         </div >
