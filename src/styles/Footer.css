@@ -18,15 +18,17 @@ footer > div{
 footer .media{
   margin: 40px 0px 0px 40px;
 }
+
 footer .site-name{
   color: white;
   font-family: Roboto;
   letter-spacing: 2px;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
 }
 footer .media .social{
   margin-top: 20px;
+  display: flex;
 }
 footer .media img{
   margin: 7px;
@@ -68,4 +70,26 @@ footer .site-map h2{
 }
 footer .site-map a{
   font-family: Nunito;
+}
+@media only screen and (max-width: 600px) {
+  footer{
+    height: 250px;
+  }
+  footer .media { 
+    margin: 10px 0px 0px 10px;
+    
+  }
+  footer .site-name{
+    font-size: 20px;
+  }
+  footer .site-map{
+    font-size: 10px;
+  }
+  footer .contact{
+    font-size: 10px;
+  }
+  footer .media .social{
+    flex-direction: column;
+    margin-left: 10px;
+  }
 }
