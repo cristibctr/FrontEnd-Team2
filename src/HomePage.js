@@ -41,8 +41,8 @@ const HomePage = () => {
 
             <div id="beneficiar">
 
-                <div class="graficHome">
-                    <Line
+                <div class="graficHome" >
+                    <Line 
                         data={linie1}
                         options={{
                             title: {

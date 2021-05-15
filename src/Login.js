@@ -9,21 +9,6 @@ const Wrapper = styled.div`
         width: 10%
     }
 `
-const BtnFacebook = styled.button`
-    width: 165px;
-    height:35px;  
-    border-radius: 4px;
-    background: #3b5998;
-    color:white;
-    border:0px transparent;
-    text-align: center;
-    margin:5px;
-    display: inline-block;
-    &:hover{
-        background: #3b5998;
-        opacity: 0.6;
-    }
-`;
 const BtnGoogle = styled.button`
     margin:5px;
     width: 165px;
@@ -67,19 +52,19 @@ export default class Login extends Component {
 
   render() {
     return (
-    
-      <div className="body">
+
+      <div className="bodyLogin">
         <div className="center">
-        <img src={require('./styles/LogoH-02.png').default} id="imageLogin"/>
-    </div>
+          <img src={require('./styles/LogoH-02.png').default} id="imageLogin" />
+        </div>
         <div>
-        
+
           <div className="center">
-            <form className="signup-container form-control" onSubmit={this.handleSubmit}>
-              <div className="center text">
+            <form className="signup-containerLogin form-controlLogin" onSubmit={this.handleSubmit}>
+              <div className="center textLogin">
                 <label>
                   <p id="textLogin">Username or email</p>
-                  <input className="form__field"
+                  <input className="form__fieldLogin"
                     type="email"
                     name="email"
                     placeholder="Please enter your email"
@@ -93,7 +78,7 @@ export default class Login extends Component {
                 <label>
 
                   <p id="textLogin">Password</p>
-                  <input className="form__field"
+                  <input className="form__fieldLogin"
                     type="password"
                     name="password"
                     placeholder="Please enter your password"
@@ -117,11 +102,8 @@ export default class Login extends Component {
                     </Button>
               </div>
               <div className="center">
-                <div className="fb">
+                <div className="fbLogin">
                   <Wrapper>
-                    <BtnFacebook>
-                      &nbsp;&nbsp;Sign In with Facebook
-                        </BtnFacebook>
                     <BtnGoogle>
                       &nbsp;&nbsp;Sign In with Google
                         </BtnGoogle>

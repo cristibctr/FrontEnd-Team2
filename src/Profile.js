@@ -23,27 +23,34 @@ const Profile = () => {
                 <div class="detalii">
                     <div></div>
                     <div> Nume: </div>
-                    <div> Nume </div>
+                    <div> <input /> </div>
                     <div></div>
                 </div>
                 <div class="detalii">
                     <div></div>
                     <div> Prenume: </div>
-                    <div> Prenume </div>
+                    <div> <input /> </div>
                     <div></div>
                 </div>
                 <div class="detalii">
                     <div></div>
                     <div> Varsta: </div>
-                    <div> Varsta </div>
+                    <div> <input /> </div>
                     <div></div>
                 </div>
                 <div class="detalii">
                     <div></div>
                     <div> Adresa: </div>
-                    <div> Adresa </div>
+                    <div> <input /> </div>
                     <div></div>
                 </div>
+                <div class="detalii">
+                    <div></div>
+                    <div> Telefon: </div>
+                    <div> <input /> </div>
+                    <div></div>
+                </div>
+
             </div>
 
             <div>
@@ -52,7 +59,7 @@ const Profile = () => {
 
             <div id="descriere" class="epilepsy">
 
-                <div>
+                <div id="graficProfile">
                     <Bar
                         data={grafic}
                         options={{
@@ -84,43 +91,32 @@ const Profile = () => {
                             <ul id="lista">
                                 <li>
                                     Luni:
-                                <input type="time" />
-                                -
-                                <input type="time" />
                                     <input />
                                 </li>
                                 <li>
                                     Marti:
-                                <input type="time" />
-                                -
-                                <input type="time" />
                                     <input />
                                 </li>
                                 <li>
                                     Miercuri:
-                                <input type="time" />
-                                -
-                                <input type="time" />
                                     <input />
                                 </li>
                                 <li>
                                     Joi:
-                                <input type="time" />
-                                -
-                                <input type="time" />
                                     <input />
                                 </li>
                                 <li>
                                     Vineri:
-                                <input type="time" />
-                                -
-                                <input type="time" />
                                     <input />
                                 </li>
                             </ul>
                         </div>
                     </div>
 
+                </div>
+
+                <div id="centerx2Profile">
+                    <div id="stergereCont"> Sterge Contul </div>
                 </div>
 
             </div>
