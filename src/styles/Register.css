@@ -1,4 +1,12 @@
-.field {
+.textRegister{
+  margin-bottom: 4px;
+  margin-top: 4px;
+  align-items: center;
+  color:rgb(6, 28, 46);
+  font-family: 'Segoe UI',sans-serif;
+}
+
+.fieldRegister {
   width: 100%;
   height: 56px;
   border-radius: 4px;
@@ -6,11 +14,11 @@
   background-color: rgba(255,255,255,0.3);
   transition: 0.3s all;
 }
-.field:hover {
+.fieldRegister:hover {
   background-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
-.form-control {
+.form-controlRegister {
   background-color: transparent;
   border-top: 0;
   border-right: 0;
@@ -18,7 +26,7 @@
   border-radius: 0;
 
 }
-.signup-container {
+.signup-containerRegister {
   position: absolute;
   top: 60%;
   right: 0;
@@ -26,23 +34,19 @@
   margin-right: auto;
   margin-left: auto;
   transform: translateY(-50%);
-
   align-items: center;
-  width: 600px;
+  width: 40%;
   border-radius: 3px;
   fill-opacity: 0.5;
   box-shadow: 0px 3px 7px rgba(0,0,0,.25);
 }
-.fb {
-  display: flex;
-  flex-wrap: wrap;
-}
-.body{
+.bodyRegister{
   display: grid; 
-  grid-template-rows: 35% 60%;
+  background: url(help.jpg) repeat;
+  grid-template-rows: 30% 75%;
   height: 100vh;
 }
-#logo{
+#logoRegister{
   margin-left: 0;
 }
 input[type=text] {
@@ -54,4 +58,41 @@ input[type=text] {
 
 #imageRegister{
   height:120%;
+}
+
+.fbRegister {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__fieldRegister {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  padding: 5px 0;
+  background: transparent;
+ 
+}
+
+@media screen and (max-width: 1000px){
+  .signup-containerRegister {
+    width:60%;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .signup-containerRegister {
+    width:80%;
+  }
+
+}
+
+@media screen and (max-width: 450px){
+  .signup-containerRegister {
+    width:90%;
+  }
+
 }

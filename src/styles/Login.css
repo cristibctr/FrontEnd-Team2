@@ -1,5 +1,3 @@
-
-
 #textLogin{
   margin-bottom: 4px;
   margin-top: 4px;
@@ -7,15 +5,14 @@
   color:rgb(6, 28, 46);
   font-family: 'Segoe UI',sans-serif;
 }
-.field:hover {
-  
+.fieldLogin:hover {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
-.fb {
+.fbLogin {
   display: flex;
   flex-wrap: wrap;
 }
-.body{
+.bodyLogin{
   background: url(help.jpg) repeat;
   display: grid;
   grid-template-rows: 30% 75%;
@@ -24,12 +21,10 @@
 #imageLogin{
   height:120%;
 }
-#logo{
+#logoLogin{
   margin-left: 0;
-  
-
 }
-.signup-container {
+.signup-containerLogin {
   position: absolute;
   top: 60%;
   right: 0;
@@ -37,9 +32,8 @@
   margin-right: auto;
   margin-left: auto;
   transform: translateY(-50%);
-
   align-items: center;
-  width: 600px;
+  width: 40%;
   border-radius: 3px;
   fill-opacity: 0.5;
   box-shadow: 0px 3px 7px rgba(0,0,0,.25);
@@ -53,7 +47,7 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-.form-control {
+.form-controlLogin {
   background-color: transparent;
   border-top: 0;
   border-right: 0;
@@ -61,33 +55,8 @@ input[type=text] {
   border-radius: 0;
 
 }
-.fb {
-  display: flex;
-  flex-wrap: wrap;
-}
-.body{
-  display: grid; 
-  grid-template-rows: 35% 65%;
-  height: 100vh;
-}
-#logo{
-  margin-left: 0;
-}
-input[type=text]{
-  width:100%;
-  padding:20px;
-  margin:5px;
-  border-radius:2px;
-  font-family:inherit;
-}
-/* input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-} */
 
-.form__field {
+.form__fieldLogin {
   font-family: inherit;
   width: 100%;
   border: 0;
@@ -95,7 +64,25 @@ input[type=text]{
   font-size: 1rem;
   padding: 5px 0;
   background: transparent;
- 
+}
+
+@media screen and (max-width: 950px){
+  .signup-containerLogin {
+    width:60%;
+  }
 
 }
 
+@media screen and (max-width: 600px){
+  .signup-containerLogin {
+    width:80%;
+  }
+
+}
+
+@media screen and (max-width: 450px){
+  .signup-containerLogin {
+    width:90%;
+  }
+
+}

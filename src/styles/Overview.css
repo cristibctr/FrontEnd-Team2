@@ -253,3 +253,99 @@
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
+@media screen and (max-width: 850px){
+  .lumina {
+    font-size: 40px;
+  }
+
+  #power{
+    font-size: 30px;
+  }
+
+  #glow{
+    font-size: 30px;
+  }
+
+  #electric{
+    font-size: 30px;
+    letter-spacing: -5px;
+  }
+
+  #jumping{
+    bottom: 40px;
+  }
+
+  #jumping span {
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .lumina {
+    font-size: 23px;
+  }
+
+  #power{
+    font-size: 20px;
+  }
+
+  #glow{
+    font-size: 20px;
+  }
+
+  #electric{
+    font-size: 20px;
+    letter-spacing: -3px;
+  }
+
+  #jumping{
+    bottom: 20px;
+  }
+
+  #jumping span {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .lumina {
+    font-size: 20px;
+  }
+
+  #power{
+    font-size: 15px;
+  }
+
+  #glow{
+    font-size: 15px;
+  }
+
+  #electric{
+    font-size: 15px;
+    letter-spacing: -3px;
+  }
+
+  #jumping{
+    bottom: 5px;
+  }
+
+  #jumping span {
+    font-size: 15px;
+    text-shadow: 0 0.5px 0 #ccc, 0 1px 0 #ccc, 0 1.5px 0 #ccc, 0 2px 0 #ccc,
+      0 2.5px 0 #ccc, 0 3px 0 transparent, 0 3.5px 0 transparent, 0 4px 0 transparent,
+      0 4.5px 0 transparent, 0 5px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  @keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 0.5px 0 #ccc, 0 1px 0 #ccc, 0 1.5px 0 #ccc, 0 2px 0 #ccc,
+        0 2.5px 0 #ccc, 0 3px 0 #ccc, 0 3.5px 0 #ccc, 0 4px 0 #ccc, 0 4.5px 0 #ccc,
+        0 25px 12.5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+}

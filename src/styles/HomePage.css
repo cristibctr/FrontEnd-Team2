@@ -3,7 +3,6 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
     background-color: black;
-    height: 60vw;
     border-style: solid;
     border-color: black;
     border-width: 5px;
@@ -70,4 +69,32 @@
 
 .graficHome{
     margin-top: 70px;
+}
+
+@media screen and (max-width: 1000px){
+    #overview
+    {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    background-color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    }
+
+    .graficHome{
+        width:80%;
+        margin-left:10%;
+    }
+
+    #binefacator{
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+        background-color:rgb(252, 178, 40);
+        padding: auto;
+    }
+ 
+
 }
