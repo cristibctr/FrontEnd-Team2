@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from 'styled-components';
+import axios from 'axios';
 import { Button } from '@material-ui/core';
 import Logo from "./Logo"
 import "./styles/Login.css"
@@ -43,11 +44,16 @@ export default class Login extends Component {
     });
   }
 
-  handleSubmit(event) {
+ handleSubmit(event) {
     const { email, password } = this.state;
     //CHANGE LATER - ONLY FOR TESTING
-    var data = 'loggedin' //response.data
+    var data = 'loggedin';
     localStorage.setItem('user', data);
+    //axios get from api
+    // var jwt = 0;
+    // var apiUrl = 'http://'; //change url
+    // axios.get(`${apiUrl}/api/jwt`).then((res) => jwt = res.data);
+    // localStorage.setItem('jwt', jwt);
   }
 
   render() {
