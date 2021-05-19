@@ -1,26 +1,24 @@
 import React from "react"
 import styles from "./styles/HomePage.css"
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 const linie1 = {
-    labels: ['Luni', 'Marti', 'Miercuri',
-        'Joi', 'Vineri', 'Sambata', 'Duminica'],
+    labels: ['Cereri disponibili'],
     datasets: [
         {
-            label: 'Cereri nerezolvate',
+            label: 'Cereri disponibili',
             fill: true,
             lineTension: 0.5,
             backgroundColor: 'rgba(75,192,192,1)',
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
-            data: [65, 59, 80, 81, 56, 31, 47]
+            data: [21] //aici introduci nr cereri actuale
         }
     ]
 }
 
 const linie2 = {
-    labels: ['Luni', 'Marti', 'Miercuri',
-        'Joi', 'Vineri', 'Sambata', 'Duminica'],
+    labels: ['Binefacatori disponibili'],
     datasets: [
         {
             label: 'Binefacatori disponibili',
@@ -29,7 +27,7 @@ const linie2 = {
             backgroundColor: 'rgba(75,192,192,1)',
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
-            data: [21, 66, 80, 59, 97, 70, 67]
+            data: [66] //aici introduci nr beneficiari actual
         }
     ]
 }
@@ -42,7 +40,7 @@ const HomePage = () => {
             <div id="beneficiar">
 
                 <div class="graficHome" >
-                    <Line 
+                    <Bar 
                         data={linie1}
                         options={{
                             title: {
@@ -67,7 +65,7 @@ const HomePage = () => {
             <div id="binefacator">
 
                 <div class="graficHome">
-                    <Line
+                    <Bar
                         data={linie2}
                         options={{
                             title: {
