@@ -3,7 +3,7 @@ import { Redirect } from "react-router";
 
 const Logout = (props) => {
     localStorage.clear();
-    window.location.reload(false);
+    window.location.reload();
     return <Redirect to="/" />
 }
 

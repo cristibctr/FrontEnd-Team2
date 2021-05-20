@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from 'styled-components';
-import axios from 'axios';
 import { Button } from '@material-ui/core';
 import Logo from "./Logo"
 import "./styles/Login.css"
@@ -33,7 +32,7 @@ export default class Login extends Component {
       password: "",
       loginErrors: ""
     };
-
+    
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -45,15 +44,26 @@ export default class Login extends Component {
   }
 
  handleSubmit(event) {
+    //event.preventDefault();
     const { email, password } = this.state;
     //CHANGE LATER - ONLY FOR TESTING
-    var data = 'loggedin';
-    localStorage.setItem('user', data);
-    //axios get from api
-    // var jwt = 0;
-    // var apiUrl = 'http://'; //change url
-    // axios.get(`${apiUrl}/api/jwt`).then((res) => jwt = res.data);
-    // localStorage.setItem('jwt', jwt);
+    // var data = 'loggedin';
+    // localStorage.setItem('token', data);
+    var jwt;
+    fetch('https://users-db-ip.herokuapp.com/api/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: this.state.email, //vinaandreea27+1@gmail.com
+        password: this.state.password //1234
+      })
+    }).then((response) => {
+      response.json();
+    }).then(event => {jwt = JSON.parse(event)});
+    if(jwt != null && jwt.success == 1)
+      localStorage.setItem('token', jwt.token);
   }
 
   render() {

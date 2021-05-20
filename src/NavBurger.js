@@ -19,7 +19,7 @@ const LoggedOutNavItems = [
 ];
 
 function isLoggedIn() {
-  return localStorage.getItem("user") != null;
+  return localStorage.getItem("token") != null;
 }
 
 const NavBurger = () => {
