@@ -34,7 +34,7 @@ const Profile = () => {
                 </div>
                 <div class="detalii">
                     <div></div>
-                    <div> Varsta: </div>
+                    <div> Distanta maxima: </div>
                     <div> <input /> </div>
                     <div></div>
                 </div>
@@ -87,36 +87,14 @@ const Profile = () => {
 
                     <div id="disponibilitate">
                         <p> Cand pot ajuta? </p>
-                        <div id="orar">
-                            <ul id="lista">
-                                <li>
-                                    Luni:
-                                    <input />
-                                </li>
-                                <li>
-                                    Marti:
-                                    <input />
-                                </li>
-                                <li>
-                                    Miercuri:
-                                    <input />
-                                </li>
-                                <li>
-                                    Joi:
-                                    <input />
-                                </li>
-                                <li>
-                                    Vineri:
-                                    <input />
-                                </li>
-                            </ul>
-                        </div>
+                        <input type="time"/> - <input type="time"/>
                     </div>
 
                 </div>
 
                 <div id="centerx2Profile">
                     <div id="stergereCont"> Sterge Contul </div>
+                    <div id="stergereCont"> Salveaza Profil </div>
                 </div>
 
             </div>

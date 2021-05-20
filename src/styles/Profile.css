@@ -91,6 +91,7 @@
 }
 
 #despre{
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -135,6 +136,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    justify-content: space-around;
 }
 
 @media screen and (max-width: 1000px){
@@ -161,6 +163,10 @@
         margin-top: 40px;
         width: 90%;
         margin-left: 5%;
+    }
+
+    #despre{
+        margin-top: 60px;
     }
 
 }
@@ -191,6 +197,11 @@
         margin-left: 5%;
     }
 
+    #despre{
+        margin-top: 40px;
+    }
+
+
 }
 
 @media screen and (max-width: 400px){
@@ -218,5 +229,10 @@
         width: 90%;
         margin-left: 5%;
     }
+
+    #despre{
+        margin-top: 0px;
+    }
+
 
 }
