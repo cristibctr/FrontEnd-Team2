@@ -2,7 +2,7 @@
     background-color: black;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 75%;
+    grid-template-rows: 50% 50%;
     grid-gap: 10px;
     border-style: solid;
     border-width: 10px;
@@ -36,7 +36,7 @@
 
 #descriere{
     display: grid;
-    grid-template-rows: 50% 40% 10%;
+    grid-template-rows: 65% 35%;
 }
 
 .epilepsy{
@@ -101,13 +101,7 @@
     width: 100%;
 }
 
-#graficProfile{
-    margin-top: 50px;
-    width: 90%;
-    margin-left: 5%;
-}
-
-#stergereCont {
+.butoaneProfile {
 	box-shadow: 3px 4px 0px 0px #8a2a21;
 	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
 	background-color:#c62d1f;
@@ -122,11 +116,11 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
-#stergereCont:hover {
+.butoaneProfile:hover {
 	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
 	background-color:#f24437;
 }
-#stergereCont:active {
+.butoaneProfile:active {
 	position:relative;
 	top:1px;
 }
@@ -171,7 +165,7 @@
 
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .detalii{
         font-size: 15px;
     }
@@ -201,6 +195,29 @@
         margin-top: 40px;
     }
 
+    .butoaneProfile {
+        box-shadow: 3px 4px 0px 0px #8a2a21;
+        background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+        background-color:#c62d1f;
+        border-radius:18px;
+        border:1px solid #d02718;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:12px;
+        padding:7px 12px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #810e05;
+    }
+    .butoaneProfile:hover {
+        background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+        background-color:#f24437;
+    }
+    .butoaneProfile:active {
+        position:relative;
+        top:1px;
+    }
 
 }
 

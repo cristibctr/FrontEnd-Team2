@@ -1,6 +1,7 @@
 #overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
     grid-gap: 5px;
     background-color: black;
     border-style: solid;
@@ -10,23 +11,25 @@
 
 .centerx2{
     display: flex;
+
+}
+
+#beneficiar{
+    display:grid;
+    background-color: rgb(21, 214, 21);
+    padding: auto;
     height: 100%;
     align-items: center;
     justify-content: center;
 }
 
-#beneficiar{
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-    background-color: rgb(21, 214, 21);
-    padding: auto;
-}
-
 #binefacator{
     display:grid;
-    grid-template-rows: 1fr 1fr;
     background-color:rgb(252, 178, 40);
     padding: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .button {
@@ -68,33 +71,36 @@
 }
 
 .graficHome{
-    margin-top: 70px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: red;
 }
 
-@media screen and (max-width: 1000px){
-    #overview
-    {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-gap: 5px;
-    background-color: black;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
+@media screen and (max-width: 430px){
+
+    .button {
+        box-shadow: 3px 4px 0px 0px #8a2a21;
+        background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+        background-color:#c62d1f;
+        border-radius:18px;
+        border:1px solid #d02718;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:13px;
+        padding:7px 25px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #810e05;
+    }
+    .button:hover {
+        background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+        background-color:#f24437;
+    }
+    .button:active {
+        position:relative;
+        top:1px;
     }
 
-    .graficHome{
-        width:80%;
-        margin-left:10%;
-    }
-
-    #binefacator{
-        display:grid;
-        grid-template-rows: 1fr 1fr;
-        background-color:rgb(252, 178, 40);
-        padding: auto;
-    }
- 
 
 }
