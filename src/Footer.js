@@ -4,12 +4,12 @@ import Contact from "./Contact"
 import Media from "./Media"
 import "./styles/Footer.css"
 
-const Footer = () => {
+const Footer = (props) => {
     return (
       <footer>
         <Media/>
         <Contact/>
-        <SiteMap/>
+        <SiteMap isLoggedIn={props.isLoggedIn}/>
       </footer>
     )
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
 import Logo from "./Logo"
+import { Redirect } from 'react-router-dom'
 import "./styles/Login.css"
 
 const Wrapper = styled.div`
@@ -30,7 +31,8 @@ export default class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      loginErrors: ""
+      loginErrors: "",
+      redirect: false
     };
     
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -43,29 +45,42 @@ export default class Login extends Component {
     });
   }
 
- handleSubmit(event) {
-    //event.preventDefault();
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/' />
+    }
+  }
+  async handleSubmit(event) {
+    event.preventDefault();
     const { email, password } = this.state;
     //CHANGE LATER - ONLY FOR TESTING
     // var data = 'loggedin';
     // localStorage.setItem('token', data);
-    var jwt;
-    fetch('https://users-db-ip.herokuapp.com/api/users/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email: this.state.email, //vinaandreea27+1@gmail.com
-        password: this.state.password //1234
+    var url = 'https://users-bd.herokuapp.com/api/users/login';
+    var request = new Request(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: this.state.email,
+          password: this.state.password
       })
-    }).then((response) => {
-      response.json();
-    }).then(event => {jwt = JSON.parse(event)});
-    if(jwt != null && jwt.success == 1)
-      localStorage.setItem('token', jwt.token);
+    });
+    const response = await fetch(request);
+    const data = await response.json();
+    if(data.success == 1){
+      localStorage.setItem('token', data.token);
+      this.props.LogIn(1);
+      this.setRedirect();
+    }
   }
-
   render() {
     return (
 
@@ -76,7 +91,7 @@ export default class Login extends Component {
         <div>
 
           <div className="center">
-            <form className="signup-containerLogin form-controlLogin" onSubmit={this.handleSubmit}>
+            <form className="signup-containerLogin form-controlLogin" >
               <div className="center textLogin">
                 <label>
                   <p id="textLogin">Username or email</p>
@@ -113,16 +128,17 @@ export default class Login extends Component {
 
 
               <div className="center">
-                <Button type="submit" variant="contained" color="primary" disableElevation>
+                {this.renderRedirect()}
+                <Button onClick={this.handleSubmit} type="button" variant="contained" color="primary" disableElevation>
                   Login
-                    </Button>
+                </Button>
               </div>
               <div className="center">
                 <div className="fbLogin">
                   <Wrapper>
                     <BtnGoogle>
                       &nbsp;&nbsp;Sign In with Google
-                        </BtnGoogle>
+                    </BtnGoogle>
                   </Wrapper>
                 </div></div>
               <p className="col-md-3 center forgot-password text-right ">
