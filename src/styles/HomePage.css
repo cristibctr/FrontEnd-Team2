@@ -1,19 +1,13 @@
 #overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 6fr 1fr 2fr;
     grid-gap: 5px;
     background-color: black;
     border-style: solid;
     border-color: black;
     border-width: 5px;
 }
-
-.centerx2{
-    display: flex;
-
-}
-
 #beneficiar{
     display:grid;
     background-color: rgb(21, 214, 21);
@@ -75,6 +69,16 @@
     grid-column-end: 3;
     background-color: red;
 }
+
+#refresh{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+}
+
 
 @media screen and (max-width: 430px){
 
