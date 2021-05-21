@@ -39,6 +39,10 @@ const HomePage = () => {
                 />
             </div>
 
+            <div id="refresh">
+                <div className="button"> Refresh </div>
+            </div>
+
             <div id="beneficiar">
                 <a href="beneficiar.js" className="button"> Beneficiar </a>
             </div>

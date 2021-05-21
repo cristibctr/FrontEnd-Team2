@@ -34,6 +34,10 @@ const Statistics = () => {
                         }}
                     />
                 </div>
+
+            <div id="refreshSt">
+                <div className="buttonSt"> Refresh </div>
+            </div>
         </div >
     )
 }

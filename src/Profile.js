@@ -8,40 +8,26 @@ const Profile = () => {
 
             <div id="date">
                 <div class="detalii">
-                    <div></div>
-                    <div> Nume: </div>
+                    <div class="spatiuPr"> Nume: </div>
                     <div> <input /> </div>
-                    <div></div>
                 </div>
                 <div class="detalii">
-                    <div></div>
-                    <div> Prenume: </div>
+                    <div class="spatiuPr"> Prenume: </div>
                     <div> <input /> </div>
-                    <div></div>
                 </div>
                 <div class="detalii">
-                    <div></div>
-                    <div> Distanta maxima: </div>
+                    <div class="spatiuPr"> Distanta maxima: </div>
                     <div> <input /> </div>
-                    <div></div>
                 </div>
                 <div class="detalii">
-                    <div></div>
-                    <div> Adresa: </div>
+                    <div class="spatiuPr"> Adresa: </div>
                     <div> <input /> </div>
-                    <div></div>
                 </div>
                 <div class="detalii">
-                    <div></div>
-                    <div> Telefon: </div>
+                    <div class="spatiuPr"> Telefon: </div>
                     <div> <input /> </div>
-                    <div></div>
                 </div>
 
-            </div>
-
-            <div>
-                <img src={require('./styles/LogoH-02.png').default} id="imageProfile" />
             </div>
 
             <div id="descriere" class="epilepsy">
@@ -50,8 +36,8 @@ const Profile = () => {
 
                     <div id="aptitudini">
                         <p> Cum pot ajuta? </p>
-                        <p> Specializari: Inginer, Reparator </p>
-                        <p> Aptitudini: Bucatar </p>
+                        <p> Specializari: <input />, <input />, <input /> </p>
+                        <p> Aptitudini: <input />, <input /> </p>
                     </div>
 
 
@@ -64,7 +50,7 @@ const Profile = () => {
 
                 <div id="centerx2Profile">
                     <div class="butoaneProfile"> Salveaza Profil </div>
-                    <Link to="/Statistics"> <div class="butoaneProfile"> Statistics </div> </Link>
+                    <a href="Statistics" class="butoaneProfile"> Statistics </a>
                     <div class="butoaneProfile"> Sterge Contul </div>
                 </div>
 
