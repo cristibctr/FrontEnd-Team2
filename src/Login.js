@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 import Logo from "./Logo"
 import { Redirect } from 'react-router-dom'
 import "./styles/Login.css"
+import { red } from "@material-ui/core/colors";
 
 const Wrapper = styled.div`
     @media only screen and (max-width : 399px) {
@@ -32,7 +33,8 @@ export default class Login extends Component {
       email: "",
       password: "",
       loginErrors: "",
-      redirect: false
+      redirect: false,
+      showError: false
     };
     
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -75,10 +77,16 @@ export default class Login extends Component {
     });
     const response = await fetch(request);
     const data = await response.json();
+    //console.log(data);
     if(data.success == 1){
       localStorage.setItem('token', data.token);
       this.props.LogIn(1);
       this.setRedirect();
+    }
+    else{
+      this.setState({
+        showError: true
+      })
     }
   }
   render() {
@@ -92,9 +100,10 @@ export default class Login extends Component {
 
           <div className="center">
             <form className="signup-containerLogin form-controlLogin" >
+              {this.state.showError ? <p className="center" style={{color: "red"}}>Email or password incorrect</p> : null}
               <div className="center textLogin">
                 <label>
-                  <p id="textLogin">Username or email</p>
+                  <p id="textLogin">Email</p>
                   <input className="form__fieldLogin"
                     type="email"
                     name="email"

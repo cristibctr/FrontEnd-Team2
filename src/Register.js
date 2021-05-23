@@ -30,10 +30,14 @@ export default class Register extends Component {
     this.state = {
       email: "",
       username: "",
+      name: "",
+      surname: "",
       address: "",
       password: "",
       passwordConfirm: "",
-      registerErrors: ""
+      success: false,
+      error:false,
+      errorMessage: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,8 +50,54 @@ export default class Register extends Component {
     });
   }
 
-  handleSubmit(event) {
-    const { email, username, address, password, passwordConfirm } = this.state;
+  async handleSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      success: false
+    });
+    this.setState({
+      error: false
+    });
+    var url = 'https://users-bd.herokuapp.com/api/users/register';
+    var request = new Request(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: this.state.name,
+            surname: this.state.surname,
+            userName: this.state.username,
+            email: this.state.email,
+            password1: this.state.password,
+            password2: this.state.passwordConfirm,
+            address: this.state.address
+      })
+    });
+    const response = await fetch(request);
+    const data = await response.json();
+    console.log(data);
+    if(data.success == 1){
+      this.setState({
+        success: true
+      });
+    }
+    else if(data.message != "Database connection errror"){
+      this.setState({
+        error: true
+      });
+      this.setState({
+        errorMessage: data.message
+      });
+    }
+    else{
+      this.setState({
+        error: true
+      });
+      this.setState({
+        errorMessage: "Data already exists or input is incorrect"
+      });
+    }
   }
 
   render() {
@@ -59,7 +109,7 @@ export default class Register extends Component {
           </div>
         </div>
         <div className="center">
-          <form className="form-controlRegister signup-containerRegister" onSubmit={this.handleSubmit}>
+          <form className="form-controlRegister signup-containerRegister">
             <div className="center">
               <label>
                 <p className="textRegister">Email address</p>
@@ -81,6 +131,32 @@ export default class Register extends Component {
                   name="username"
                   placeholder="Username"
                   value={this.state.username}
+                  onChange={this.handleChange}
+                  required
+                />
+              </label>
+            </div>
+            <div className="center">
+              <label>
+                <p className="textRegister">Name</p>
+                <input className="form__fieldRegister"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={this.state.name}
+                  onChange={this.handleChange}
+                  required
+                />
+              </label>
+            </div>
+            <div className="center">
+              <label>
+                <p className="textRegister">Surname</p>
+                <input className="form__fieldRegister"
+                  type="text"
+                  name="surname"
+                  placeholder="Surname"
+                  value={this.state.surname}
                   onChange={this.handleChange}
                   required
                 />
@@ -127,18 +203,12 @@ export default class Register extends Component {
             </div>
 
             <div className="center">
-              <Button type="submit" variant="contained" color="primary" disableElevation>
+              <Button onClick={this.handleSubmit} type="button" variant="contained" color="primary" disableElevation>
                 Register
-                    </Button>
+              </Button>
             </div>
-            <div className="center">
-              <div className="fbRegister">
-                <Wrapper>
-                  <BtnGoogle>
-                    &nbsp;&nbsp;Register with Google
-                        </BtnGoogle>
-                </Wrapper>
-              </div></div>
+            {this.state.success ? <h2 className="center" style={{color: "green"}}>Account created</h2> : null}
+        {this.state.error ? <h2 className="center" style={{color: "red"}}>{this.state.errorMessage}</h2> : null}
           </form>
         </div>
       </div>
