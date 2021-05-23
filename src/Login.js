@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom'
 import "./styles/Login.css"
 import { red } from "@material-ui/core/colors";
 
+
 const Wrapper = styled.div`
     @media only screen and (max-width : 399px) {
         width: 10%
@@ -36,7 +37,7 @@ export default class Login extends Component {
       redirect: false,
       showError: false
     };
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -66,41 +67,42 @@ export default class Login extends Component {
     // localStorage.setItem('token', data);
     var url = 'https://users-bd.herokuapp.com/api/users/login';
     var request = new Request(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: this.state.email,
-          password: this.state.password
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
       })
     });
     const response = await fetch(request);
     const data = await response.json();
-    //console.log(data);
-    if(data.success == 1){
+    if (data.success == 1) {
+      //succes
       localStorage.setItem('token', data.token);
       this.props.LogIn(1);
       this.setRedirect();
+    } else {
+      //popup failed
+      alert("User not found!");
     }
-    else{
-      this.setState({
-        showError: true
-      })
-    }
+   
   }
+
+
   render() {
     return (
 
       <div className="bodyLogin">
-        <div className="center">
-          <img src={require('./styles/LogoH-02.png').default} id="imageLogin" />
-        </div>
+
         <div>
 
           <div className="center">
             <form className="signup-containerLogin form-controlLogin" >
-              {this.state.showError ? <p className="center" style={{color: "red"}}>Email or password incorrect</p> : null}
+              <div className="center">
+                <img src={require('./styles/LogoH-02.png').default} id="imageLogin" />
+              </div>
               <div className="center textLogin">
                 <label>
                   <p id="textLogin">Email</p>
@@ -131,7 +133,7 @@ export default class Login extends Component {
               <div className="center">
                 <div className="custom-control custom-checkbox">
                   <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                  <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                  <label className="custom-control-label" htmlFor="customCheck1" id="textLogin">Remember me</label>
                 </div>
               </div>
 
