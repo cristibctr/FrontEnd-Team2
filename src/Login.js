@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
+
 import Logo from "./Logo"
 import { Redirect } from 'react-router-dom'
 import "./styles/Login.css"
@@ -92,6 +93,7 @@ export default class Login extends Component {
 
 
   render() {
+  
     return (
 
       <div className="bodyLogin">
@@ -141,7 +143,7 @@ export default class Login extends Component {
               <div className="center">
                 {this.renderRedirect()}
                 <Button onClick={this.handleSubmit} type="button" variant="contained" color="primary" disableElevation>
-                  Login
+                Login
                 </Button>
               </div>
             </form>
