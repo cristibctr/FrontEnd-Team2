@@ -142,17 +142,6 @@ export default class Login extends Component {
                   Login
                 </Button>
               </div>
-              <div className="center">
-                <div className="fbLogin">
-                  <Wrapper>
-                    <BtnGoogle>
-                      &nbsp;&nbsp;Sign In with Google
-                    </BtnGoogle>
-                  </Wrapper>
-                </div></div>
-              <p className="col-md-3 center forgot-password text-right ">
-                <a href="#">Forgot password?</a>
-              </p>
             </form>
           </div>
         </div>
