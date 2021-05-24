@@ -18,7 +18,7 @@ getUserData();
 async function getUserData() {
     var url = 'https://all-db.herokuapp.com/api/v1/statisticForUser';
     var request = new Request(url, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
